@@ -19,7 +19,10 @@ module.exports = {
       {
         test: /\.(jpg|png|mp3|json)$/,
         loader: 'file-loader',
-        options: { name: 'assets/imgs/[name].[ext]' }
+        options: {
+          name: 'assets/imgs/[name].[ext]',
+          esModule: false
+        }
       }
     ]
   },

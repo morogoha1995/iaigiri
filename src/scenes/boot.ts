@@ -10,10 +10,10 @@ class Boot extends Phaser.Scene {
 
   preload() {
     this.load
-      .image("bg", bg)
-      .image("normalSamurai", normalSamurai)
-      .image("rageSamurai", rageSamurai)
-      .image("kakashi", kakashi)
+      .image("bg", bg.default)
+      .image("normalSamurai", normalSamurai.default)
+      .image("rageSamurai", rageSamurai.default)
+      .image("kakashi", kakashi.default)
   }
 
   create() {

@@ -1,4 +1,5 @@
 import Phaser from "phaser"
+import { Boot } from "./scenes/boot"
 import { Game } from "./scenes/game"
 import { WIDTH, HEIGHT } from "./constants"
 
@@ -17,6 +18,7 @@ window.onload = () => {
       }
     },
     scene: [
+      Boot,
       Game,
     ]
   })
