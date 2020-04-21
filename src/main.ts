@@ -17,6 +17,7 @@ window.onload = () => {
         debug: false
       }
     },
+    backgroundColor: "#FFFFFF",
     scene: [
       Boot,
       Game,

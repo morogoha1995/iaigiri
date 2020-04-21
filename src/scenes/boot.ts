@@ -1,8 +1,3 @@
-import * as bg from "../assets/imgs/bg.jpg"
-import * as normalSamurai from "../assets/imgs/normal-samurai.png"
-import * as rageSamurai from "../assets/imgs/rage-samurai.png"
-import * as kakashi from "../assets/imgs/kakashi.png"
-
 class Boot extends Phaser.Scene {
   constructor() {
     super({ key: "boot" })
@@ -10,10 +5,20 @@ class Boot extends Phaser.Scene {
 
   preload() {
     this.load
-      .image("bg", bg.default)
-      .image("normalSamurai", normalSamurai.default)
-      .image("rageSamurai", rageSamurai.default)
-      .image("kakashi", kakashi.default)
+      .image("bg", "./assets/imgs/bg.jpg")
+      .image("normalSamurai", "./assets/imgs/normal-samurai.png")
+      .image("rageSamurai", "./assets/imgs/rage-samurai.png")
+      .image("kakashi", "./assets/imgs/kakashi.png")
+      .image("0", "./assets/imgs/number_0.png")
+      .image("1", "./assets/imgs/number_1.png")
+      .image("2", "./assets/imgs/number_2.png")
+      .image("3", "./assets/imgs/number_3.png")
+      .image("4", "./assets/imgs/number_4.png")
+      .image("5", "./assets/imgs/number_5.png")
+      .image("6", "./assets/imgs/number_6.png")
+      .image("7", "./assets/imgs/number_7.png")
+      .image("8", "./assets/imgs/number_8.png")
+      .image("9", "./assets/imgs/number_9.png")
   }
 
   create() {
