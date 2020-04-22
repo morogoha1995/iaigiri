@@ -19,6 +19,11 @@ class Boot extends Phaser.Scene {
       .image("7", "./assets/imgs/number_7.png")
       .image("8", "./assets/imgs/number_8.png")
       .image("9", "./assets/imgs/number_9.png")
+      .image("x", "./assets/imgs/x.png")
+      .image("slash", "./assets/imgs/slash.png")
+      .audio("slashSound", "./assets/audios/slash.mp3")
+      .audio("wait", "./assets/audios/wait.mp3")
+      .audio("chance", "./assets/audios/chance.mp3")
   }
 
   create() {

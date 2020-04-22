@@ -1,24 +1,26 @@
-const createFontStyle = (color: string) => {
+const createFontStyle = () => {
   return {
-    color: color,
-    stroke: "white",
+    color: "white",
     fontFamily: "Fira code, Meiryo",
-    fontSize: `24px`,
-    fontStyle: "bold",
-    strokeThickness: 6
+    fontSize: `24px`
   }
 }
 
 class TextBtn extends Phaser.GameObjects.Text {
   constructor(scene: Phaser.Scene, x: number, y: number, text: string, color: string) {
-    super(scene, x, y, text, createFontStyle(color))
+    super(scene, x, y, text, createFontStyle())
 
-    this.setAlpha(0)
+    this
+      .setOrigin(0.5)
+      .setBackgroundColor(color)
+      .setAlpha(0)
+      .setPadding(10, 6, 10, 6)
+
     scene.add.existing(this)
-    // ゆっくりと現れる
+
     scene.add.tween({
       targets: this,
-      duration: 1000,
+      duration: 500,
       alpha: 1,
       onComplete: () => this.setInteractive()
     })
