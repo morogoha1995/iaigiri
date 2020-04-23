@@ -24,6 +24,7 @@ class Boot extends Phaser.Scene {
       .audio("slashSound", "./assets/audios/slash.mp3")
       .audio("wait", "./assets/audios/wait.mp3")
       .audio("chance", "./assets/audios/chance.mp3")
+      .audio("gameover", "./assets/audios/gameover.mp3")
   }
 
   create() {

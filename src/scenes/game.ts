@@ -94,6 +94,7 @@ class Game extends Phaser.Scene {
       return
 
     this.waitSound.stop()
+    this.sound.play("gameover")
     this.isAccept = false
     this.samurai.setTexture("normalSamurai")
     this.bg.setAlpha(1)
@@ -107,7 +108,6 @@ class Game extends Phaser.Scene {
     const objs: Phaser.GameObjects.GameObject[] = []
 
     const soundBtn = new SoundBtn(this, this.isMute)
-      .setOrigin(0.5)
       .on("pointerdown", () => {
         this.isMute = !this.isMute
         soundBtn.switch(this.isMute)
@@ -130,11 +130,10 @@ class Game extends Phaser.Scene {
 
     if (text === "もう一回") {
       objs.push(new TextBtn(this, WIDTH / 2, 120, "ツイートする", "#00acee")
-        .setOrigin(0.5)
         .on("pointerdown", () => this.tweet()))
 
       objs.push(this.add.text(WIDTH / 2, 280, "無念…", {
-        color: "black",
+        color: "#333333",
         fontFamily: "Fira code, Meiryo",
         fontSize: "30px",
         fontStyle: "bold",

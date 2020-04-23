@@ -9,13 +9,6 @@ window.onload = () => {
     width: WIDTH,
     height: HEIGHT,
     parent: 'app',
-    physics: {
-      default: 'arcade',
-      arcade: {
-        gravity: { y: 600 },
-        debug: false
-      }
-    },
     backgroundColor: "#FFFFFF",
     scene: [
       Boot,

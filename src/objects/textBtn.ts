@@ -1,14 +1,11 @@
-const createFontStyle = () => {
-  return {
-    color: "white",
-    fontFamily: "Fira code, Meiryo",
-    fontSize: `24px`
-  }
-}
-
 class TextBtn extends Phaser.GameObjects.Text {
   constructor(scene: Phaser.Scene, x: number, y: number, text: string, color: string) {
-    super(scene, x, y, text, createFontStyle())
+    super(scene, x, y, text, {
+      color: "white",
+      fontFamily: "Meiryo, sans-serif",
+      fontSize: "24px",
+      fontStyle: "bold"
+    })
 
     this
       .setOrigin(0.5)
